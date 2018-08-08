@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RoutingConfig {
 
-//    @Bean
-//    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-//        return builder.routes()
-//                .route("api-1", p -> p.path("/service/api/**")
-//                        .uri("lb://api"))
-//                .build();
-//    }
+    @Bean
+    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+        return builder.routes()
+                .route("api1", p -> p.path("/api1/**")
+                        .uri("lb://API"))
+                .build();
+    }
 }

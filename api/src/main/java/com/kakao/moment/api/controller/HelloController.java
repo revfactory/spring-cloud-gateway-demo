@@ -14,6 +14,16 @@ public class HelloController {
         return Mono.just("hello " + name);
     }
 
+    @GetMapping("/api1/hello")
+    public Mono<String> hello1(@RequestParam String name) {
+        return Mono.just("hello1 " + name);
+    }
+
+    @GetMapping("/api2/hello")
+    public Mono<String> hello2(@RequestParam String name) {
+        return Mono.just("hello2 " + name);
+    }
+
     @GetMapping("favicon.ico")
     @ResponseBody
     public void returnNoFavicon() {
