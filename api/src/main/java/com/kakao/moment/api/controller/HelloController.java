@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 @RestController
 public class HelloController {
 
-    @GetMapping("/")
+    @GetMapping("/hello")
     public Mono<String> hello(@RequestParam String name) {
         return Mono.just("hello " + name);
     }
